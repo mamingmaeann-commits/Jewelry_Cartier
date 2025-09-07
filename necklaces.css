@@ -1,0 +1,284 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Perandory;
+}
+
+body {
+    background-color: #121212;
+    color: #333;
+    overflow-y: auto; 
+}
+
+/* --- Navbar and Header --- */
+.navbar {
+    position: fixed;
+    background: #3a0201;
+    font-family: Perandory;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;   /* smaller logo */
+    width: auto;
+    transform: translateX(20px);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: #bc9864;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar li a:hover {
+    color: gold;
+}
+
+.cart-link {
+    font-size: 22.5px;
+    color: #bc9864;
+    padding: 5px;
+}
+
+.cart-link:hover {
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a0201;
+    color: #bc9864;
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* --- Sidebar --- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #3a0201;
+    color: #bc9864;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0 20px 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.sidebar ul li a {
+    color: #bc9864;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 500;
+}
+
+.overlay.active {
+    display: block;
+}
+
+main {
+    margin: 100px auto 120px;   /* space below fixed header + center horizontally */
+    padding: 0 20px;
+    max-width: 1200px;          /* keeps content readable */
+}
+
+main h2 {
+    font-family: 'Didot', serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.campaigns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;    /* centers campaigns inside main */
+}
+
+.campaign-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.campaign-item:hover {
+    transform: scale(1.05);
+}
+
+.campaign-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    padding: 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(255,255,255,0.8);
+    color: black;
+}
+
+.campaign-content {
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+}
+
+.campaign-content h3 {
+    font-family: 'Didot', serif;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.campaign-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: white;
+}
+
+.my-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #6f1306; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.my-button:hover {
+    background-color: #cc0000; 
+    transform: scale(1.05);
+}
+
+footer {
+    margin-left: 1px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #bc9864;
+    background: #3a0201;
+    background: (0, 0, 0, 0.4);
+    width: calc(100% - 1px);
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+  }
+  main, footer {
+    margin-left: 0;
+    width: 100%;
+  }
+  .campaigns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lightbox close button */
+.lb-close {
+  font-size: 40px !important;
+  color: white !important;
+  top: 15px !important;
+  right: 20px !important;
+}

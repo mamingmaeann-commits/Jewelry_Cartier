@@ -1,0 +1,79 @@
+<!doctype html>
+<hmtl lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0" />
+    <link rel="stylesheet" href="index.css">
+		<title>Cartier</title>
+	</head>
+<html>
+<body>
+<div class="overlay" id="overlay"></div>
+<div>
+ <img src="C:\project\MamingWebDev\emekabeh.png"alt="" class="img1">
+</div>
+
+<header>
+  <div class="brand"><img src="C:\project\MamingWebDev\Logo.jpg"></div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</header>
+
+<nav class="sidebar" id="sidebar">
+  <div>
+    <ul>
+      <li><a href="index.html" class="active-link">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="watches.html">Watches</a></li>
+	<li><a href="jewelry.html">Jewelry</a></li>
+      <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+    </nav>
+  </div>
+
+<div class="content">
+    <a href="jewelry.html" class="my-button">Shop Now!</a>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="index.html"><img src="logo.png" alt="Logo" class="active-link"> Home</a></li>
+        
+    </ul>
+</nav>
+</body>
+</html>
+  
+
+<nav class="footer">
+	<a href="https://www.facebook.com/maeann.maming.1"><img src="C:\project\MamingWebDev\facebook-icon.png" alt="Facebook" style="width: 35px;"></a>
+	</a>
+	<a href="https://www.instagram.com/maia_annz/"><img src="C:\project\MamingWebDev\ig-logo.png" alt="Instagram" style="width: 35px;"></a>
+	</a>
+	<a href="https://www.tiktok.com/@mayandannwithoute?_t=ZS-8yeYc0s4dyj&_r=1"><img src="C:\project\MamingWebDev\tiktokicon.png" alt="Tiktok" style="width: 35px;"></a>
+	</a>
+	<a href="https://x.com/onmcoammm?t=QOV95UVb7VazJEUZYpGPAQ&s=07"><img src="C:\project\MamingWebDev\twitter-x-logo-png-9.png" alt="Twitter" style="width: 35px;"></a>
+	</a>
+	<p> This website is for project purposes only. </p>
+	</nav>
+	</footer>
+</nav>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+</script>
+</body>
+</html> 
+	
